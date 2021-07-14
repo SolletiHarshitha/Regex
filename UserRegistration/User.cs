@@ -72,7 +72,7 @@ namespace UserRegistration
                 Console.WriteLine("It is not valid");
         }
         //Pattern for validating the password
-        string passwordPattern="^[A-Za-z]{7,}$";
+        string passwordPattern= "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
         /// <summary>
         /// UC - 5,6  Validating the Password
         /// </summary>
