@@ -87,5 +87,11 @@ namespace UserRegistration
             else
                 Console.WriteLine("It is not valid");
         }
+        public bool ValidateSampleEmail(string email)
+        {
+            Regex regex = new Regex(emailPattern);
+            bool result = regex.IsMatch(email);
+            return result;
+        }
     }
 }
