@@ -87,6 +87,11 @@ namespace UserRegistration
             else
                 Console.WriteLine("It is not valid");
         }
+        /// <summary>
+        /// UC - 9 Validating Samle Emails
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public bool ValidateSampleEmail(string email)
         {
             Regex regex = new Regex(emailPattern);
