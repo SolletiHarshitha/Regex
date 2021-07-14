@@ -9,9 +9,9 @@ namespace UserRegistration
 {
     class User
     {
-        string namePattern = "^[A-Z][a-z]{2,}$";
-        string emailPattern = "^[abc.a-z]+@[bl.co.a-z]";
-        string numberPattern = "^[0-9]+[\\s]+[0-9]{10}$";
+        string namePattern = "^[A-Z]{1}[A-Za-z]{2,}$";
+        string emailPattern = "abc.[A-Za-z1-9]*@bl.co.[a-z]*$";
+        string numberPattern = "^[1-9]{1}[0-9]{0,3}\\s[1-9]{1}[0-9]{9}$";
         /// <summary>
         /// UC - 1  Validating the First Name
         /// </summary>
