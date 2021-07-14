@@ -9,9 +9,8 @@ namespace UserRegistration
 {
     class User
     {
+        //Pattern for validating the name
         string namePattern = "^[A-Z][a-z]{2,}$";
-        string emailPattern = "^[abc.a-z]+@[bl.co.a-z]";
-        string numberPattern = "^[0-9]+[\\s]+[0-9]{10}$";
         /// <summary>
         /// UC - 1  Validating the First Name
         /// </summary>
@@ -26,7 +25,6 @@ namespace UserRegistration
             else
                 Console.WriteLine("It is not valid");
         }
-
         /// <summary>
         /// UC - 2  Validating the Last Name
         /// </summary>
@@ -41,6 +39,8 @@ namespace UserRegistration
             else
                 Console.WriteLine("It is not valid");
         }
+        //Pattern for validating the email
+        string emailPattern = "^[abc.a-z]+@[bl.co.a-z]";
         /// <summary>
         /// UC - 3  Validating the Email
         /// </summary>
@@ -55,6 +55,8 @@ namespace UserRegistration
             else
                 Console.WriteLine("It is not valid");
         }
+        //Pattern for validating the Mobile Number
+        string numberPattern = "^[0-9]+[\\s]+[0-9]{10}$";
         /// <summary>
         /// UC - 4  Validating the Mobile Number
         /// </summary>
@@ -64,6 +66,22 @@ namespace UserRegistration
             string mobileNumber = Console.ReadLine();
             Regex regex = new Regex(numberPattern);
             bool result = regex.IsMatch(mobileNumber);
+            if (result)
+                Console.WriteLine("It is valid");
+            else
+                Console.WriteLine("It is not valid");
+        }
+        //Pattern for validating the password
+        string passwordPattern="^[a-z]{7,}$";
+        /// <summary>
+        /// UC - 5  Validating the Password
+        /// </summary>
+        public void ValidatePassword()
+        {
+            Console.WriteLine("Enter a Password to validate : ");
+            string password = Console.ReadLine();
+            Regex regex = new Regex(passwordPattern);
+            bool result = regex.IsMatch(password);
             if (result)
                 Console.WriteLine("It is valid");
             else
