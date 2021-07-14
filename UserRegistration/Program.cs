@@ -7,33 +7,34 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("--------------User Registration----------------");
-            Console.WriteLine("1.First Name Validation");
-            Console.WriteLine("2.Last Name Validation");
-            Console.WriteLine("3.Email Validation");
-            Console.WriteLine("0.Exit");
-            Console.WriteLine("Choose an option : ");
-            int option = Convert.ToInt32(Console.ReadLine());
-            User user = new User();
-            switch(option)
+            bool flag = true;
+            while (flag)
             {
-                case 1:
-                    user.ValidateFirstName();
-                    break;
-                case 2:
-                    user.ValidateLastName();
-                    break;
-                case 3:
-                    user.ValidateEmail();
-                    break;
-                case 0:
-                    System.Environment.Exit(0);
-                    break;
-                default:
-                    break;
-            }
-            
-           
-            
+                Console.WriteLine("1.First Name Validation");
+                Console.WriteLine("2.Last Name Validation");
+                Console.WriteLine("3.Email Validation");
+                Console.WriteLine("0.Exit");
+                Console.WriteLine("Choose an option : ");
+                int option = Convert.ToInt32(Console.ReadLine());
+                User user = new User();
+                switch (option)
+                {
+                    case 1:
+                        user.ValidateFirstName();
+                        break;
+                    case 2:
+                        user.ValidateLastName();
+                        break;
+                    case 3:
+                        user.ValidateEmail();
+                        break;
+                    case 0:
+                        flag = false;
+                        break;
+                    default:
+                        break;
+                }
+            }   
         }
     }
 }
