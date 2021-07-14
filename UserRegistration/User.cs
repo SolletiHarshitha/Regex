@@ -10,6 +10,9 @@ namespace UserRegistration
     class User
     {
         string pattern = "^[A-Z][a-z]{2,}";
+        /// <summary>
+        /// UC - 1  Validating the First Name
+        /// </summary>
         public void ValidateFirstName()
         {
             Console.WriteLine("Enter a First Name to validate : ");
@@ -21,5 +24,6 @@ namespace UserRegistration
             else
                 Console.WriteLine("It is not valid");
         }
+        
     }
 }
