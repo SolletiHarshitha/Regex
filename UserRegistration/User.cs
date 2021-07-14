@@ -74,7 +74,7 @@ namespace UserRegistration
         //Pattern for validating the password
         string passwordPattern= "^(?=.*[0-9])(?=.*[A-Z])[A-Za-z1-9.@!#$%^*&]{8,}$";
         /// <summary>
-        /// UC - 5,6,7  Validating the Password
+        /// UC - 5,6,7,8  Validating the Password
         /// </summary>
         public void ValidatePassword()
         {
