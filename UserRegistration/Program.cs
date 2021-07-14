@@ -9,7 +9,7 @@ namespace UserRegistration
             Console.WriteLine("--------------User Registration----------------");
             User user = new User();
             user.ValidateFirstName();
-            
+            user.ValidateLastName();
         }
     }
 }

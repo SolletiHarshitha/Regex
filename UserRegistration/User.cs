@@ -24,5 +24,20 @@ namespace UserRegistration
             else
                 Console.WriteLine("It is not valid");
         }
+
+        /// <summary>
+        /// UC - 2  Validating the Last Name
+        /// </summary>
+        public void ValidateLastName()
+        {
+            Console.WriteLine("Enter a Last Name to validate : ");
+            string lastName = Console.ReadLine();
+            Regex regex = new Regex(pattern);
+            bool result = regex.IsMatch(lastName);
+            if (result)
+                Console.WriteLine("It is valid");
+            else
+                Console.WriteLine("It is not valid");
+        }
     }
 }
