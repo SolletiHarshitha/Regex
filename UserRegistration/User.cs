@@ -9,8 +9,9 @@ namespace UserRegistration
 {
     class User
     {
-        string namePattern = "^[A-Z][a-z]{2,}";
+        string namePattern = "^[A-Z][a-z]{2,}$";
         string emailPattern = "^[abc.a-z]+@[bl.co.a-z]";
+        string numberPattern = "^[0-9]+[\\s]+[0-9]{10}$";
         /// <summary>
         /// UC - 1  Validating the First Name
         /// </summary>
@@ -49,6 +50,20 @@ namespace UserRegistration
             string email = Console.ReadLine();
             Regex regex = new Regex(emailPattern);
             bool result = regex.IsMatch(email);
+            if (result)
+                Console.WriteLine("It is valid");
+            else
+                Console.WriteLine("It is not valid");
+        }
+        /// <summary>
+        /// UC - 4  Validating the Mobile Number
+        /// </summary>
+        public void ValidateMobileNumber()
+        {
+            Console.WriteLine("Enter a Mobile Number to validate : ");
+            string mobileNumber = Console.ReadLine();
+            Regex regex = new Regex(numberPattern);
+            bool result = regex.IsMatch(mobileNumber);
             if (result)
                 Console.WriteLine("It is valid");
             else
