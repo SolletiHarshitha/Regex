@@ -72,9 +72,9 @@ namespace UserRegistration
                 Console.WriteLine("It is not valid");
         }
         //Pattern for validating the password
-        string passwordPattern= "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+        string passwordPattern= "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
         /// <summary>
-        /// UC - 5,6  Validating the Password
+        /// UC - 5,6,7  Validating the Password
         /// </summary>
         public void ValidatePassword()
         {
