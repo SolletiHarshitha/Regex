@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace UserRegistration
+{
+    class User
+    {
+        string pattern = "^[A-Z][a-z]{2,}";
+        public void ValidateFirstName()
+        {
+            Console.WriteLine("Enter a First Name to validate : ");
+            string firstName = Console.ReadLine();
+            Regex regex = new Regex(pattern);
+            bool result = regex.IsMatch(firstName);
+            if(result)
+                Console.WriteLine("It is valid");
+            else
+                Console.WriteLine("It is not valid");
+        }
+    }
+}
