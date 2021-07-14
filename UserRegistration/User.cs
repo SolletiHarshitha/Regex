@@ -9,7 +9,7 @@ namespace UserRegistration
 {
     class User
     {
-        string pattern = "^[A-Z][a-z]{2,}";
+        string pattern = "^[A-Z]{1}[A-Za-z]{2,}$";
         /// <summary>
         /// UC - 1  Validating the First Name
         /// </summary>
