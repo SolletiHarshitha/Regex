@@ -10,7 +10,7 @@ namespace UserRegistration
     class User
     {
         //Pattern for validating the name
-        string namePattern = "^[A-Z][a-z]{2,}$";
+        string namePattern = "^[A-Z]{1}[A-Za-z]{2,}$";
         /// <summary>
         /// UC - 1  Validating the First Name
         /// </summary>
@@ -40,7 +40,7 @@ namespace UserRegistration
                 Console.WriteLine("It is not valid");
         }
         //Pattern for validating the email
-        string emailPattern = "^[abc.a-z]+@[bl.co.a-z]";
+        string emailPattern = "^abc.[A-Za-z1-9]*@bl.co.[a-z]*$";
         /// <summary>
         /// UC - 3  Validating the Email
         /// </summary>
@@ -56,7 +56,7 @@ namespace UserRegistration
                 Console.WriteLine("It is not valid");
         }
         //Pattern for validating the Mobile Number
-        string numberPattern = "^[0-9]+[\\s]+[0-9]{10}$";
+        string numberPattern = "^[1-9]{1}[0-9]{0,3}\\s[1-9]{1}[0-9]{9}$";
         /// <summary>
         /// UC - 4  Validating the Mobile Number
         /// </summary>
