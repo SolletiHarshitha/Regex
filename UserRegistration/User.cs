@@ -32,7 +32,7 @@ namespace UserRegistration
         //Pattern for validating the email
         string emailPattern = "^[A-Za-z0-9]+([._+-][A-Za-z0-9]+)*@[0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
         /// <summary>
-        /// UC - 3  Validating the Email
+        /// UC - 3,9  Validating the Email
         /// </summary>
         public bool ValidateEmail(string email)
         {   
@@ -60,17 +60,6 @@ namespace UserRegistration
         {
             Regex regex = new Regex(passwordPattern);
             bool result = regex.IsMatch(password);
-            return result;
-        }
-        /// <summary>
-        /// UC - 9 Validating Samle Emails
-        /// </summary>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public bool ValidateSampleEmail(string email)
-        {
-            Regex regex = new Regex(emailPattern);
-            bool result = regex.IsMatch(email);
             return result;
         }
     }
